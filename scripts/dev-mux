@@ -1,4 +1,0 @@
-#!/bin/sh
-tmux split-window -v
-tmux split-window -h
-tmux select-layout 90d8,211x45,0,0{117x45,0,0,0,93x45,118,0[93x22,118,0,2,93x22,118,23,3]}
