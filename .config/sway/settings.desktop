@@ -1,0 +1,15 @@
+
+output * bg /home/ashwin/Pictures/catppuccin-wallpapers/landscapes/forrest.png fill
+output DP-1 scale 1.25
+
+# Execute Firefox in workspace 1
+workspace 1
+exec librewolf
+
+# Execute Kitty in workspace 2
+workspace 2
+exec kitty
+
+# Execute steam in workspace 3
+workspace 3
+exec steam

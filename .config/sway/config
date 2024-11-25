@@ -18,7 +18,8 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+# set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show=dmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
@@ -26,7 +27,7 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/ashwin/Pictures/walls-catppuccin-mocha/street.png fill
+# output * bg /home/ashwin/Pictures/catppuccin-wallpapers/landscapes/forrest.png fill
 #
 # Example configuration:
 #
@@ -225,17 +226,17 @@ include /etc/sway/config.d/*
 
 font pango:monospace 14
 
-# Execute Firefox in workspace 1
-workspace 1
-exec firefox
-
-# Execute Kitty in workspace 2
-workspace 2
-exec kitty
-
-# Execute steam in workspace 3
-workspace 3
-exec steam
+# # Execute Firefox in workspace 1
+# workspace 1
+# exec librewolf
+#
+# # Execute Kitty in workspace 2
+# workspace 2
+# exec kitty
+#
+# # Execute steam in workspace 3
+# workspace 3
+# exec steam
 
 # Disable idle fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
@@ -255,3 +256,8 @@ bindsym Mod4+p       exec grimshot save active
 bindsym Mod4+Shift+p exec grimshot save screen
 bindsym Mod4+Mod1+p  exec grimshot save output
 bindsym Mod4+Ctrl+p  exec grimshot save area
+
+# Monitor scaling
+# output DP-1 scale 1.25
+
+include ./settings
